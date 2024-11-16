@@ -38,7 +38,7 @@ class DataBaseHelper(context: Context)  : SQLiteOpenHelper(context,"personajes.d
          contentValues.put("IMG", img)
 
         val result = db.insert("PERSONAJES", null, contentValues  )
-        return if (result == (-1).toLong() ) "Existe una falla" else "Inserción correcta"
+        return if (result == (-1).toLong() ) "Error al guardar" else "Guardado con Exito"
     }
 
 
